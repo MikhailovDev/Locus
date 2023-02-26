@@ -1,0 +1,25 @@
+@import "resetParameters.scss";
+@import "fonts.scss";
+@import "rules.scss";
+@import "header.scss";
+@import "about.scss";
+@import "how.scss";
+@import "project.scss";
+@import "certificate.scss";
+@import "feedback.scss";
+
+
+@import "keyframes.scss";
+
+body {
+	background-color: $bgcol;
+	display: flex;
+	flex-direction: column;
+}
+
+.main {
+	flex: 1 0 auto;
+}
+
+
+

@@ -1,0 +1,25 @@
+@keyframes flashing {
+	0% {
+		background-color: #ccf0e65b;
+	}
+	100% {
+		background-color: $bggreen;
+	}
+}
+@keyframes flashing-form {
+	0% {
+		background-color: white;
+	}
+	100% {
+		background-color: #ccf0e628;
+	}
+}
+
+@keyframes shaking {
+	0% {
+		left: -5px;
+	}
+	100% {
+		left: 5px;
+	}
+}

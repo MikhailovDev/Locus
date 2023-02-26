@@ -1,0 +1,120 @@
+.title {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 800;
+	font-size: 70px;
+	line-height: 105px;
+
+	color: $textcol1;
+
+	@include width-fonts(1024px, 60px, 85px);
+	@include width-fonts(768px, 50px, 65px);
+	@include width-fonts(500px, 40px, 45px);
+}
+.text {
+	font-family: 'Poppins';
+	font-style: normal;
+	font-weight: 400;
+	font-size: 30px;
+	line-height: 45px;
+
+	color: $textcol2;
+
+	@include width-fonts(1024px, 27px, 40px);
+	@include width-fonts(768px, 24px, 35px);
+	@include width-fonts(500px, 21px, 30px);
+}
+
+
+.about {
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 200px;
+		margin-bottom: 123px;
+		@include width-margin(1024px, 190px 0 100px 0);
+		@include width-margin(768px, 160px 0 70px 0);
+		@include width-margin(500px, 120px 0 50px 0);
+	}
+	&__item {
+		&_text {
+			flex: 0 1 743px;
+			margin-right: 30px;
+		}
+		&_photo {
+			position: relative;
+			right: -36px;
+			align-self: center;
+			flex: 0 1 833px;
+
+			@media (max-width: 1690px) {
+				right: 0;
+			}
+		}
+	}
+	&__btn {
+		@include width-margin(1300px, 0 0 60px 0);
+		@include width-margin(768px, 0 0 30px 0);
+	}
+
+	&__description {
+		margin-top: 51px;
+	}
+	&__title {
+		margin-bottom: 50px;
+		@include width-margin(768px, 0 0 30px 0);
+	}
+	&__text {
+		margin-bottom: 50px;
+		@include width-margin(768px, 0 0 30px 0);
+	}
+	&__image {
+		max-width: 834px;
+	}
+	&__img {
+		max-width: 100%;
+		display: block;
+	}
+}
+
+
+// * Ноуты
+@media (max-width: 1300px) { //! 1400px
+	.about {
+		&__content {
+			flex-direction: column;
+		}
+		&__item {
+			display: flex;
+			justify-content: center;
+			flex: 0;
+			&_text {
+				margin-right: 0;
+			}
+		}
+		&__description {
+			margin-top: 0;
+			padding-right: 0;
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+			flex: 0 1 834px;
+		}
+		&__text {
+			text-align: justify;
+		}
+		&__img-inner {
+			position: absolute;
+			top: 0;
+			left: 0;
+			margin: 30px 50px;
+			@media (max-width: 770px) {
+				margin: 0;
+			}
+		}
+	}
+}
+
+
+
+

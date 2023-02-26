@@ -1,0 +1,50 @@
+//! header
+// * фон
+$green: #58A9A5;
+//* фон для фото
+$bggreen: #CCF0E6;
+$white: #FFFFFF;
+$black: #000000;
+$yellow: #FEC62D;
+
+//* hover
+$hvrgreen: #67b9b7;
+//* active
+
+//! about
+//* background
+$bgcol: #ffffff;
+$textcol1:#1C2323;
+$textcol2: #404242;
+
+//! how
+//* text color
+$txcol: #486958;
+
+%hover20 {
+	border-radius: 20px;
+	overflow: hidden;
+	transition: all 0.2s ease-in;
+
+	&:hover {
+		border-radius: 3px;
+	}
+}
+
+@mixin width-margin($width, $margin) {
+	@media (max-width: $width) {
+		margin: $margin;
+	}
+}
+@mixin width-text-align($width, $text-a) {
+	@media (max-width: $width) {
+		text-align: $text-a;
+	}
+}
+@mixin width-fonts($width, $font-s, $line-h) {
+	@media (max-width: $width) {
+		font-size: $font-s;
+		line-height: $line-h;
+	}
+}
+

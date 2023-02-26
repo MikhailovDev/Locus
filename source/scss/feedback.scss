@@ -1,0 +1,231 @@
+.feedback {
+	&__inner {
+		margin-bottom: 300px;
+		@include width-margin(1024px, 0 0 250px 0);
+		@include width-margin(768px, 0 0 170px 0);
+		@include width-margin(500px, 0 0 90px 0);
+	}
+	&__content {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	&__info {
+		flex: 0 0 398px;
+		margin-right: 60px;
+		padding: 100px 0 0 0;
+	}
+
+	&__title {
+		margin-bottom: 10px;
+		text-transform: capitalize;
+		line-height: 75px;
+	}
+	&__text {
+		position: relative;
+
+		font-family: 'Poppins';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 25px;
+		line-height: 38px;
+
+		color: $txcol;
+
+		@include width-fonts(1024px, 24px, 36px);
+		@include width-fonts(768px, 23px, 34px);
+		@include width-fonts(500px, 22px, 32px);
+
+		&::after {
+			content: " ";
+			position: absolute;
+			bottom: -58px;
+			left: 0;
+			height: 23px;
+			width: 135px;
+			border-top: 4px solid $green;
+			border-bottom: 4px solid $green;
+			@media (max-width: 1024px) {
+				left: 43.3%;
+				bottom: -52px;
+				width: 115px;
+				height: 20px;
+				border-top: 3px solid $green;
+				border-bottom: 3px solid $green;
+			}
+			@media (max-width: 768px) {
+				left: 42.5%;
+				bottom: -46px;
+				width: 95px;
+				height: 17px;
+			}
+			@media (max-width: 500px) {
+				left: 42%;
+				bottom: -40px;
+				width: 75px;
+				height: 14px;
+			}
+		}
+	}
+	&__form {
+		flex: 0 1 956px;
+
+		border: 1px solid $green;
+		@extend %hover20;
+		overflow: visible;
+		&:hover {
+			background-color: #ccf0e62c;
+			animation: flashing-form 1.5s ease-in-out infinite alternate;
+		}
+	}
+
+	.form {
+		display: flex;
+		padding: 60px;
+		flex-direction: column;
+		flex: 0 1 1000px;
+
+		@media (max-width: 1024px) {
+			padding: 40px;
+		}
+		@media (max-width: 768px) {
+			padding: 20px;
+		}
+
+		&__input-columns {
+			display: flex;
+			flex-direction: column;
+		}
+		&__description-columns {
+			display: flex;
+			flex-direction: column;
+
+			margin-bottom: 60px;
+			@include width-margin(1024px, 0 0 50px 0);
+			@include width-margin(768px, 0 0 40px 0);
+			@include width-margin(500px, 0 0 20px 0);
+		}
+
+
+
+		&__label {
+			margin-bottom: 10px;
+			position: relative;
+
+			font-family: 'Poppins';
+			font-style: normal;
+			font-weight: 500;
+			font-size: 25px;
+			line-height: 38px;
+
+			cursor: pointer;
+
+			@include width-fonts(1024px, 24px, 36px);
+			@include width-fonts(768px, 23px, 34px);
+			@include width-fonts(500px, 22px, 32px);
+
+			color: $txcol;
+		}
+		&__input-place {
+			margin-bottom: 10px;
+			padding: 0 10px;
+
+			font-size: 22px;
+			font-family: "Poppins";
+			line-height: 38px;
+
+			background-color: #ccf0e65b;
+
+			border-radius: 10px;
+
+			cursor: pointer;
+
+			@include width-fonts(1024px, 21px, 36px);
+			@include width-fonts(768px, 20px, 34px);
+			@include width-fonts(500px, 19px, 32px);
+		}
+		&__textarea-place {
+			padding: 0 10px;
+			margin-right: 60px;
+			width: 70%;
+
+			cursor: pointer;
+
+			@media (max-width: 500px) {
+				width: 100%;
+			}
+
+			font-family: "Poppins";
+			line-height: 38px;
+			font-size: 22px;
+
+			background-color: #ccf0e65b;
+
+			border-radius: 10px;
+
+			@include width-fonts(1024px, 21px, 36px);
+			@include width-fonts(768px, 20px, 34px);
+			@include width-fonts(500px, 19px, 32px);
+
+		}
+		&__input-button {
+			position: relative;
+			align-self: flex-start;
+
+			font-weight: 700;
+
+			border-radius: 20px;
+
+			@media (max-width: 1024px) {
+				padding: 17px 60px;
+			}
+			@media (max-width: 500px) {
+				padding: 15px 50px;
+				align-self: center;
+			}
+		}
+		&__focus {
+			transition: 1s;
+			position: relative;
+			&:focus {
+				animation: flashing 1.2s ease-in-out alternate infinite forwards;
+			}
+			&:not(:placeholder-shown) {
+				background-color: $bggreen;
+			}
+			&:not(:placeholder-shown){
+					animation: shaking 0.2s ease-in-out infinite alternate;
+					&:hover {
+						animation-play-state: paused;
+					}
+			}
+		}
+	}
+
+
+	@media (max-width: 1024px) {
+		.feedback {
+			&__inner {
+				display: flex;
+				justify-content: center;
+				max-width: 100%;
+			}
+			&__content {
+				flex-direction: column;
+				max-width: 667px;
+			}
+			&__info {
+				padding: 0;
+				margin: 0 0 80px 0;
+				flex: content;
+			}
+			&__title {
+				text-align: center;
+			}
+			&__form {
+				flex: 0;
+				width: 100%;
+			}
+		}
+	}
+}
