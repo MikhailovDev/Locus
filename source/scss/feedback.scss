@@ -227,4 +227,20 @@
 			}
 		}
 	}
+	@media (max-width: 500px) {
+		.feedback {
+			&__inner {
+				max-width: 500px;
+			}
+			&__content {
+				max-width: 500px;
+			}
+			&__info {
+				max-width: 500px;
+			}
+			&__form {
+				max-width: 500px;
+			}
+		}
+	}
 }

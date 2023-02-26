@@ -2064,6 +2064,20 @@ h1, h2, h3, h4, h5, h6 {
 		width: 100%;
 	}
 }
+@media (max-width: 500px) {
+	.feedback .feedback__inner {
+		max-width: 500px;
+	}
+	.feedback .feedback__content {
+		max-width: 500px;
+	}
+	.feedback .feedback__info {
+		max-width: 500px;
+	}
+	.feedback .feedback__form {
+		max-width: 500px;
+	}
+}
 
 @-webkit-keyframes flashing {
 	0% {
