@@ -1814,7 +1814,6 @@ h1, h2, h3, h4, h5, h6 {
 }
 .feedback .form__label {
 	margin-bottom: 10px;
-	position: relative;
 	font-family: "Poppins";
 	font-style: normal;
 	font-weight: 500;
@@ -1879,11 +1878,6 @@ h1, h2, h3, h4, h5, h6 {
 	font-size: 22px;
 	background-color: rgba(204, 240, 230, 0.3568627451);
 	border-radius: 10px;
-}
-@media (max-width: 500px) {
-	.feedback .form__textarea-place {
-		width: 100%;
-	}
 }
 @media (max-width: 1024px) {
 	.feedback .form__textarea-place {

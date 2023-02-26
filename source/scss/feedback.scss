@@ -73,6 +73,7 @@
 		border: 1px solid $green;
 		@extend %hover20;
 		overflow: visible;
+
 		&:hover {
 			background-color: #ccf0e62c;
 			animation: flashing-form 1.5s ease-in-out infinite alternate;
@@ -110,7 +111,6 @@
 
 		&__label {
 			margin-bottom: 10px;
-			position: relative;
 
 			font-family: 'Poppins';
 			font-style: normal;
@@ -151,9 +151,9 @@
 
 			cursor: pointer;
 
-			@media (max-width: 500px) {
-				width: 100%;
-			}
+			// @media (max-width: 500px) {
+			// 	width: 100%;
+			// }
 
 			font-family: "Poppins";
 			line-height: 38px;
