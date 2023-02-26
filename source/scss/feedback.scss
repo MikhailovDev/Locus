@@ -68,9 +68,10 @@
 		}
 	}
 	&__form {
-		flex: 0 1 956px;
+		padding: 60px;
 
 		border: 1px solid $green;
+
 		@extend %hover20;
 		overflow: visible;
 
@@ -82,7 +83,6 @@
 
 	.form {
 		display: flex;
-		padding: 60px;
 		flex-direction: column;
 		flex: 0 1 1000px;
 
@@ -106,8 +106,6 @@
 			@include width-margin(768px, 0 0 40px 0);
 			@include width-margin(500px, 0 0 20px 0);
 		}
-
-
 
 		&__label {
 			margin-bottom: 10px;
@@ -146,14 +144,13 @@
 		}
 		&__textarea-place {
 			padding: 0 10px;
-			margin-right: 60px;
 			width: 70%;
 
 			cursor: pointer;
 
-			// @media (max-width: 500px) {
-			// 	width: 100%;
-			// }
+			@media (max-width: 500px) {
+				width: 100%;
+			}
 
 			font-family: "Poppins";
 			line-height: 38px;
