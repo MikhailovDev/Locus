@@ -45,6 +45,7 @@
 			width: 135px;
 			border-top: 4px solid $green;
 			border-bottom: 4px solid $green;
+
 			@media (max-width: 1024px) {
 				left: 43.3%;
 				bottom: -52px;
@@ -213,8 +214,9 @@
 			}
 			&__info {
 				padding: 0;
+				flex: 0;
 				margin: 0 0 80px 0;
-				flex: content;
+				max-width: 100%;
 			}
 			&__title {
 				text-align: center;
