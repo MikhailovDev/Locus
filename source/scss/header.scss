@@ -218,7 +218,7 @@
 		}
 		&__nav {
 			position: fixed;
-			top: 120px;
+			top: 100px;
 			right: -350px;
 			z-index: 21;
 			padding: 0;
@@ -243,6 +243,26 @@
 		&__btn {
 			display: none;
 		}
+
+		//* Кнопка-бургер
+		#burger-target:target ~ .burger-icon::before {
+			transform: rotate(315deg);
+			background-color: $yellow;
+			top: 17.5px;
+			transition: 1s;
+		}
+		#burger-target:target ~ .burger-icon span {
+			background-color: transparent;
+			top: 15px;
+			width: 0;
+			transition: 0.4s;
+		}
+		#burger-target:target ~ .burger-icon::after {
+			transform: rotate(-315deg);
+			background-color: $yellow;
+			bottom: 17.5px;
+			transition: 1s;
+		}
 	}
 
 	.nav {
@@ -253,28 +273,6 @@
 	}
 	.burger-icon {
 		display: block;
-	}
-	.btn {
-	}
-
-	//* Кнопка-бургер
-	#burger-target:target ~ .burger-icon::before {
-		transform: rotate(315deg);
-		background-color: $yellow;
-		top: 15px;
-		transition: 1s;
-	}
-	#burger-target:target ~ .burger-icon span {
-		background-color: transparent;
-		top: 15px;
-		width: 0;
-		transition: 0.4s;
-	}
-	#burger-target:target ~ .burger-icon::after {
-		transform: rotate(-315deg);
-		background-color: $yellow;
-		bottom: 15px;
-		transition: 1s;
 	}
 
 	//* Появление навбара
@@ -324,51 +322,43 @@
 		&__inner {
 			height: 40px;
 		}
+		&__nav {
+			top: 80px;
+		}
 		&__button-sign-up {
 			width: 53px;
 			&_active:active {
 				width: 58px;
 			}
 		}
-	}
-	.burger-icon {
-		// display: none;
-		position: relative;
-		width: 45px;
-		height: 35px;
-		caret-color: transparent;
 
-		&::before {
-			content: " ";
-			position: absolute;
-			top: 0;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background-color: $green;
-			border-radius: 5px;
-			transition: 300ms ease-in-out;
+		.burger-icon {
+			width: 45px;
+			height: 35px;
+
+			& span {
+				top: 15px;
+			}
 		}
-		& span {
-			position: absolute;
+
+		//* Кнопка-бургер
+		#burger-target:target ~ .burger-icon::before {
+			transform: rotate(315deg);
+			background-color: $yellow;
 			top: 15px;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background-color: $green;
-			border-radius: 5px;
-			transition: 300ms ease-in-out;
+			transition: 1s;
 		}
-		&::after {
-			content: " ";
-			position: absolute;
-			bottom: 0;
-			left: 0;
-			width: 100%;
-			height: 5px;
-			background-color: $green;
-			border-radius: 5px;
-			transition: 300ms ease-in-out;
+		#burger-target:target ~ .burger-icon span {
+			background-color: transparent;
+			top: 15px;
+			width: 0;
+			transition: 0.4s;
+		}
+		#burger-target:target ~ .burger-icon::after {
+			transform: rotate(-315deg);
+			background-color: $yellow;
+			bottom: 15px;
+			transition: 1s;
 		}
 	}
 }

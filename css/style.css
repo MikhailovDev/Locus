@@ -352,7 +352,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.header__nav {
 		position: fixed;
-		top: 120px;
+		top: 100px;
 		right: -350px;
 		z-index: 21;
 		padding: 0;
@@ -382,6 +382,29 @@ h1, h2, h3, h4, h5, h6 {
 	.header__btn {
 		display: none;
 	}
+	.header #burger-target:target ~ .burger-icon::before {
+		-webkit-transform: rotate(315deg);
+		        transform: rotate(315deg);
+		background-color: #FEC62D;
+		top: 17.5px;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
+	.header #burger-target:target ~ .burger-icon span {
+		background-color: transparent;
+		top: 15px;
+		width: 0;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+	.header #burger-target:target ~ .burger-icon::after {
+		-webkit-transform: rotate(-315deg);
+		        transform: rotate(-315deg);
+		background-color: #FEC62D;
+		bottom: 17.5px;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
 	.nav__item {
 		display: -webkit-box;
 		display: -ms-flexbox;
@@ -390,29 +413,6 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.burger-icon {
 		display: block;
-	}
-	#burger-target:target ~ .burger-icon::before {
-		-webkit-transform: rotate(315deg);
-		        transform: rotate(315deg);
-		background-color: #FEC62D;
-		top: 15px;
-		-webkit-transition: 1s;
-		transition: 1s;
-	}
-	#burger-target:target ~ .burger-icon span {
-		background-color: transparent;
-		top: 15px;
-		width: 0;
-		-webkit-transition: 0.4s;
-		transition: 0.4s;
-	}
-	#burger-target:target ~ .burger-icon::after {
-		-webkit-transform: rotate(-315deg);
-		        transform: rotate(-315deg);
-		background-color: #FEC62D;
-		bottom: 15px;
-		-webkit-transition: 1s;
-		transition: 1s;
 	}
 	#burger-target:target {
 		right: 20px;
@@ -457,52 +457,44 @@ h1, h2, h3, h4, h5, h6 {
 	.header__inner {
 		height: 40px;
 	}
+	.header__nav {
+		top: 80px;
+	}
 	.header__button-sign-up {
 		width: 53px;
 	}
 	.header__button-sign-up_active:active {
 		width: 58px;
 	}
-	.burger-icon {
-		position: relative;
+	.header .burger-icon {
 		width: 45px;
 		height: 35px;
-		caret-color: transparent;
 	}
-	.burger-icon::before {
-		content: " ";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: #58A9A5;
-		border-radius: 5px;
-		-webkit-transition: 300ms ease-in-out;
-		transition: 300ms ease-in-out;
-	}
-	.burger-icon span {
-		position: absolute;
+	.header .burger-icon span {
 		top: 15px;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: #58A9A5;
-		border-radius: 5px;
-		-webkit-transition: 300ms ease-in-out;
-		transition: 300ms ease-in-out;
 	}
-	.burger-icon::after {
-		content: " ";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: #58A9A5;
-		border-radius: 5px;
-		-webkit-transition: 300ms ease-in-out;
-		transition: 300ms ease-in-out;
+	.header #burger-target:target ~ .burger-icon::before {
+		-webkit-transform: rotate(315deg);
+		        transform: rotate(315deg);
+		background-color: #FEC62D;
+		top: 15px;
+		-webkit-transition: 1s;
+		transition: 1s;
+	}
+	.header #burger-target:target ~ .burger-icon span {
+		background-color: transparent;
+		top: 15px;
+		width: 0;
+		-webkit-transition: 0.4s;
+		transition: 0.4s;
+	}
+	.header #burger-target:target ~ .burger-icon::after {
+		-webkit-transform: rotate(-315deg);
+		        transform: rotate(-315deg);
+		background-color: #FEC62D;
+		bottom: 15px;
+		-webkit-transition: 1s;
+		transition: 1s;
 	}
 }
 .title {
@@ -1911,6 +1903,7 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 .feedback .form__input-place {
+	width: 100%;
 	margin-bottom: 10px;
 	padding: 0 10px;
 	font-size: 22px;
@@ -1992,9 +1985,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 }
 .feedback .form__focus {
+	position: relative;
 	-webkit-transition: 1s;
 	transition: 1s;
-	position: relative;
 }
 .feedback .form__focus:focus {
 	-webkit-animation: flashing 1.2s ease-in-out alternate infinite forwards;
@@ -2062,20 +2055,6 @@ h1, h2, h3, h4, h5, h6 {
 		    -ms-flex: 0;
 		        flex: 0;
 		width: 100%;
-	}
-}
-@media (max-width: 500px) {
-	.feedback .feedback__inner {
-		max-width: 500px;
-	}
-	.feedback .feedback__content {
-		max-width: 500px;
-	}
-	.feedback .feedback__info {
-		max-width: 500px;
-	}
-	.feedback .feedback__form {
-		max-width: 500px;
 	}
 }
 

@@ -126,6 +126,7 @@
 			color: $txcol;
 		}
 		&__input-place {
+			width: 100%;
 			margin-bottom: 10px;
 			padding: 0 10px;
 
@@ -183,8 +184,10 @@
 			}
 		}
 		&__focus {
-			transition: 1s;
 			position: relative;
+
+			transition: 1s;
+
 			&:focus {
 				animation: flashing 1.2s ease-in-out alternate infinite forwards;
 			}
@@ -224,22 +227,6 @@
 			&__form {
 				flex: 0;
 				width: 100%;
-			}
-		}
-	}
-	@media (max-width: 500px) {
-		.feedback {
-			&__inner {
-				max-width: 500px;
-			}
-			&__content {
-				max-width: 500px;
-			}
-			&__info {
-				max-width: 500px;
-			}
-			&__form {
-				max-width: 500px;
 			}
 		}
 	}
