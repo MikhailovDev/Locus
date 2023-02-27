@@ -1,2 +1,2 @@
 # Locus
-My first layout - Locus
+My first landing page - Locus
