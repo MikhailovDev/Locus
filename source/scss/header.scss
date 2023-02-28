@@ -226,7 +226,7 @@
 			display: flex;
 			flex-direction: column;
 			align-items: flex-end;
-			padding: 0 20px 25px 0;
+			padding: 0 20px 15px 0;
 			box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
 
 			width: 0;
@@ -269,6 +269,7 @@
 		&__item {
 			display: flex;
 			opacity: 0;
+			font-size: 30px;
 		}
 	}
 	.burger-icon {
@@ -278,8 +279,8 @@
 	//* Появление навбара
 	#burger-target:target {
 		right: 20px;
-		width: 200px;
-		height: 200px;
+		width: 220px;
+		height: 220px;
 
 		box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
 		border-radius: 50% 20px 20px 50%;
@@ -304,13 +305,6 @@
 	}
 	#burger-target:target ~ .burger-link {
 		display: block;
-	}
-	//* Мобилки
-	@media (max-height: 500px) {
-		#burger-target:target {
-			top: 110px;
-			right: 10px;
-		}
 	}
 }
 
