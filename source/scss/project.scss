@@ -76,10 +76,6 @@
 
 	&__main-text {
 		flex: 1 0 auto;
-
-		&_center {
-			flex: none;
-		}
 	}
 
 	&__item-title {
@@ -157,11 +153,6 @@
 
 		&__main-text_center {
 			margin-bottom: 30px;
-		}
-
-		&__item-block {
-			&_center {
-			}
 		}
 	}
 	@media (max-width: 500px) {

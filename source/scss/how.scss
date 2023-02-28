@@ -55,11 +55,9 @@
 	}
 	&__item-1 {
 		flex: 0 1 1063px;
-		order: 2;
 	}
 	&__item-2 {
 		flex: 0 1 549px;
-		order: 1;
 	}
 	&__description-column {
 		display: flex;
@@ -126,9 +124,11 @@
 		}
 		&__item-1 {
 			flex: 0;
+			order: 2;
 		}
 		&__item-2 {
 			flex: 0 1 200px;
+			order: 1;
 		}
 		&__description-column {
 			display: flex;
