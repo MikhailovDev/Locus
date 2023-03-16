@@ -1,27 +1,29 @@
-
-			<header class="header header__position">
-				<div class="container">
+		<header id="open" class="header">
+			<div id="close" class="header__wrapper">
+				<div class="header__container">
 					<div class="header__inner">
-						<div class="header__logo logo">
-							<img class="logo__img" src="img/header/logo.svg" alt="Locus">
-							<a class="logo__name logo__name_active" href="#">Locus</a>
+						<div href="" class="header__logo logo">
+							<div class="logo__image">
+								<img class="logo__item" src="img/header/logo.svg" alt="Логотип">
+							</div >
+							<a href="#" class="logo__name logo__name_active logo__name_hover">locus</a>
 						</div>
-						<ul class="header__nav nav" id="burger-target">
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#">Home</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#contact">Contact</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#location">Location</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#about">About Us</a></li>
-						</ul>
-						<a href="#">
-							<img class="header__button-sign-up header__button-sign-up_active" src="img/header/sign-up.svg" alt="sign-up">
+						<nav class="header__menu menu">
+							<ul class="menu__items">
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">home</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">contact</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">location</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">about us</a></li>
+							</ul>
+						</nav>
+						<button class="header__button button button_hover button_active">sign up</button>
+						<a href="#" class="header__sign-up header__sign-up_active">
+							<img class="header__sign-up-image" src="img/header/sign-up.svg" alt="sign-up">
 						</a>
-						<a class="burger-icon" href="#burger-target">
-							<span></span>
-						</a>
-						<a class="burger-link" href="#">
-						</a>
-						<button class="btn header__btn btn_hover btn_active">sign up</button>
-					</div >
+						<div class="header__menu-burger"></div>
+						<a class="burger-link" href="#open"></a>
+						<a class="close-burger" href="#close"></a>
+					</div>
 				</div>
-			</header>
-
+			</div >
+		</header>

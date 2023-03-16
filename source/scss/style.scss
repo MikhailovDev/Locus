@@ -1,27 +1,10 @@
-@import "resetParameters.scss";
-@import "fonts.scss";
-@import "rules.scss";
+@import "other/reset-styles.scss";
+@import "other/basic-styles.scss";
+@import "other/fonts.scss";
+@import "other/rules.scss";
 @import "header.scss";
 @import "about.scss";
-@import "how.scss";
+@import "mission.scss";
 @import "project.scss";
-@import "certificate.scss";
-@import "feedback.scss";
-
-
-@import "keyframes.scss";
-
-body {
-	background-color: $bgcol;
-}
-.wrapper {
-	display: flex;
-	flex-direction: column;
-}
-
-.main {
-	flex: 1 1 auto;
-}
-
-
-
+@import "testimonial.scss";
+@import "footer.scss";

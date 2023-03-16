@@ -1,366 +1,323 @@
-.btn {
-	padding: 21px 90px;
-	white-space: nowrap;
-	caret-color: transparent;
+.button {
+	padding: 0.86em 3.52em;
 
-	font-family: 'Poppins';
-	font-style: normal;
-	font-size: 25px;
-
-	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
-	transition: 50ms;
-
-	@include width-fonts(1024px, 23px, 25px);
-	@include width-fonts(768px, 21px, 23px);
-	@include width-fonts(500px, 19px, 21px);
-
-	border-radius: 20px 20px 20px 0px;
+	font-weight: 700;
+	text-transform: capitalize;
+	@include fonts-size(320px, 1920px, 20px, 25px, 1.48, left);
 
 	color: $white;
 	background-color: $green;
+	border-radius: 20px 20px 20px 0px;
+
+	transition: 50ms;
+
+	white-space: nowrap;
+	caret-color: transparent;
 
 	&_hover:hover {
 		background-color: $hvrgreen;
 	}
 	&_active:active {
-		box-shadow: 0 0 0 rgba(0, 0, 0, 0.466);
 		background-color: $yellow;
-	}
-
-}
-.container {
-	max-width: 1920 - 166 - 143px;
-	margin: 0 auto;
-	padding: 0 20px;
-}
-.burger-icon {
-	display: none;
-	position: relative;
-	width: 50px;
-	height: 40px;
-	caret-color: transparent;
-
-	&::before {
-		content: " ";
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: $green;
-		border-radius: 5px;
-		transition: 300ms ease-in-out;
-	}
-	& span {
-		position: absolute;
-		top: 17.5px;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: $green;
-		border-radius: 5px;
-		transition: 300ms ease-in-out;
-	}
-	&::after {
-		content: " ";
-		position: absolute;
-		bottom: 0;
-		left: 0;
-		width: 100%;
-		height: 5px;
-		background-color: $green;
-		border-radius: 5px;
-		transition: 300ms ease-in-out;
 	}
 }
 .header {
-	&__position {
-		position: fixed;
-		top: 0;
-		left: 0;
-		z-index: 10;
-		width: 100%;
-		height: 100px;
-
-		background-color: $bgcol;
-
-		border-bottom: 1px solid $txcol;
+	&__wrapper {
+		padding: 4.42vw 0;
+		@media (min-width: 1921px) {
+			padding: 85px 0;
+		}
 	}
 	&__inner {
-		margin: 9px 0;
-		display: flex;
+		display: -webkit-box;
 		align-items: center;
 		justify-content: space-between;
-		height: 80px;
+		position: relative;
+		@media (max-width: 1440px) {
+			display: flex;
+		}
 	}
 	&__logo {
 		display: flex;
 		align-items: center;
-	}
-	&__nav {
-		flex: 0 1 655px;
-		padding: 0 40px;
-
-		display: flex;
-		justify-content: space-between;
 		caret-color: transparent;
 	}
-	&__button-sign-up {
+	&__menu {
+		padding: 0 20px 0 15px;
+
+		flex: 0 1 655px;
+	}
+	&__button {
+		font-weight: 500;
+
+		border-radius: 20px;
+	}
+
+
+
+	&__menu-burger,
+	&__menu-burger::before,
+	&__menu-burger::after {
 		display: none;
-		width: 60px;
 		position: relative;
-		margin-right: 10px;
+
+		width: 45px;
+		height: 5px;
+
+		background-color: $green;
+		border-radius: 5px;
+
+		caret-color: transparent;
+	}
+	&__menu-burger::before,
+	&__menu-burger::after {
+		content: " ";
+		position: absolute;
+		right: 0;
+	}
+	&__menu-burger::before {
+		top: -15px;
+	}
+	&__menu-burger::after {
+		top: 10px;
+	}
+
+	&__sign-up {
+		display: none;
 		&_active:active {
-			left: 2.5px;
-			width: 65px;
+			width: 58px;
 		}
 	}
-	&__btn {
-		border-radius: 20px;
-		font-weight: 500;
-		text-transform: capitalize;
-	}
+
 }
 .logo {
-	caret-color: transparent;
-	&__img {
-		width: 37px;
-		height: 45px;
-		margin-right: 14px;
+	&__image {
+		margin-right: 4px;
 
-		@media (max-width: 1024px) {
-			width: 35px;
-			height: 41.85px;
-			margin-right: 12px;
-		}
-		@media (max-width: 768px) {
-			width: 33px;
-			height: 41.88px - 3.12px;
-			margin-right: 10px;
-		}
-		@media (max-width: 500px) {
-			width: 31px;
-			height: 41.85px - 6.24;
-			margin-right: 8px;
-		}
+		width: 37px;
+	}
+	&__item {
+		max-width: 100%;
+		position: relative;
 	}
 	&__name {
+		padding: 5px 10px;
+
 		font-family: 'Poppins';
 		font-style: normal;
 		font-weight: 800;
-		font-size: 35px;
+		@include fonts-size(320px, 1920px, 25px, 35px, 1.48, left);
+		text-transform: capitalize;
 
-		color: $green;
+		color: #58A9A5;
+		caret-color: transparent;
 
-		@include width-fonts(1024px, 33px, 35px);
-		@include width-fonts(768px, 31px, 35px);
-		@include width-fonts(500px, 29px, 35px);
-
+		&_hover:hover {
+			color: $hvrgreen;
+		}
 		&_active:active {
 			color: $yellow;
 		}
 	}
 }
-.nav {
+.menu {
+	&__items {
+		display: flex;
+		justify-content: space-between;
+	}
 	&__item {
-		//! ul li { list style: none } - вот почему у меня появлялся неожиданный отступ
-
-		font-family: 'Poppins';
-		font-style: normal;
-		font-weight: 400;
-		font-size: 25px;
-
-		color: $green;
+		text-align: center;
 	}
 	&__link {
-		color: $black;
-	}
-	&__link_hover {
 		position: relative;
-		&:hover {
-			color: $green;
-			font-weight: 700;
-		}
-		&::after {
+
+		padding: 5px 10px;
+
+		font-weight: 400;
+		text-transform: capitalize;
+		font-size: 25px;
+		line-height: 1.5;
+
+		color: $grey;
+		caret-color: transparent;
+
+		&::before {
 			transition: left 200ms ease-in-out, width 200ms, background-color 200ms;
 			transition-timing-function: ease-in-out;
 
 			content: " ";
 			position: absolute;
-			bottom: -10px;
+			bottom: -4px;
 			left: 0;
 			width: 0;
 			border-radius: 21px;
 			height: 6px;
 			background-color: transparent;
 		}
-		&:hover::after {
-			left: 25%;
-			width: 50%;
-			background-color: $yellow;
+		&_hover:hover {
+			color: $hvrgreen;
+			text-shadow: 0 0 1px $green, 0 0 1px $green, 0 0 1px $green, 0 0 1px $green, 0 0 1px $green;
+
+			&:hover::before {
+				left: 25%;
+				width: 50%;
+
+				background-color: $yellow;
+			}
 		}
-	}
-	&__link_active:active {
-		color: $yellow;
+		&_active:active {
+			color: $yellow;
+		}
+
 	}
 }
-@media (max-width: 1024px) {
+
+@media (max-width: 1023.98px) {
 	.header {
-		&__position {
-			height: 80px;
-		}
 		&__inner {
-			justify-content: flex-start;
-			height: 60px;
 		}
 		&__logo {
 			margin-right: auto;
+			position: relative;
+			z-index: 3;
 		}
-		&__nav {
+		&__menu {
 			position: fixed;
-			top: 100px;
-			right: -350px;
-			z-index: 21;
-			padding: 0;
+			z-index: 2;
+			top: 0;
+			right: -100%;
+			height: 100vh;
+			width: 300px;
+			padding-top: calc(60px + 9vw);
+			overflow: auto;
 
-			display: flex;
-			flex-direction: column;
-			align-items: flex-end;
-			padding: 0 20px 15px 0;
-			box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
+			background-color: $dark-green;
 
-			width: 0;
-			height: 0;
-			border-radius: 50%;
+			&::before {
+				content: " ";
+				position: fixed;
+				top: 0;
+				right: -100%;
+				height: calc(60px + 9vw);
+				width: 300px;
 
-			background-color: $bggreen;
-
-			transition: 1s cubic-bezier(0.19, 1, 0.22, 1), width 0.8s, border-radius 0.5s 0.4s;
+				background-color: $dark-green;
+				z-index: 1;
+				@media (max-width: 500px) {
+					width: 100vw;
+				}
+			}
+			@media (max-width: 500px) {
+				width: 100vw;
+			}
 		}
-		&__button-sign-up {
+		&__button {
+			margin-right: 30px;
+			position: relative;
+			z-index: 3;
+		}
+		&__menu-burger,
+		&__menu-burger::before,
+		&__menu-burger::after {
+			position: relative;
+			z-index: 3;
 			display: block;
 		}
-		&__btn {
+		&__button {
 			display: none;
 		}
+		&__sign-up {
+			position: absolute;
+			z-index: 3;
+			right: 60px;
+			top: 0;
 
-		//* Кнопка-бургер
-		#burger-target:target ~ .burger-icon::before {
-			transform: rotate(315deg);
-			background-color: $yellow;
-			top: 17.5px;
-			transition: 1s;
-		}
-		#burger-target:target ~ .burger-icon span {
-			background-color: transparent;
-			top: 15px;
-			width: 0;
-			transition: 0.4s;
-		}
-		#burger-target:target ~ .burger-icon::after {
-			transform: rotate(-315deg);
-			background-color: $yellow;
-			bottom: 17.5px;
-			transition: 1s;
-		}
-	}
-
-	.nav {
-		&__item {
-			display: flex;
-			opacity: 0;
-			font-size: 30px;
-		}
-	}
-	.burger-icon {
-		display: block;
-	}
-
-	//* Появление навбара
-	#burger-target:target {
-		right: 20px;
-		width: 220px;
-		height: 220px;
-
-		box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.24);
-		border-radius: 50% 20px 20px 50%;
-	}
-	#burger-target:target li {
-		opacity: 1;
-		transition-duration: 0.5s;
-		transition-delay: 0.5s;
-	}
-	//* Уход навбара в закат
-	#burger-target:not(:target) {
-		transition: 0.5s ease-out;
-		right: -350px;
-	}
-
-	//* Ссылка
-	.burger-link {
-		display: none;
-		padding: 20px 21px;
-		position: absolute;
-		right: 23px;
-	}
-	#burger-target:target ~ .burger-link {
-		display: block;
-	}
-}
-
-@media (max-width: 768px) {
-	.header {
-		&__position {
-			height: 60px;
-		}
-		&__inner {
-			height: 40px;
-		}
-		&__nav {
-			top: 80px;
-		}
-		&__button-sign-up {
 			width: 53px;
+			display: block;
+
 			&_active:active {
+				top: -2px;
+				right: 58px;
+
 				width: 58px;
 			}
 		}
-
-		.burger-icon {
-			width: 45px;
-			height: 35px;
-
-			& span {
-				top: 15px;
+		&__sign-up-image {
+			max-width: 100%;
+			display: block;
+		}
+	}
+.menu {
+		&__items {
+			flex-direction: column;
+		}
+		&__item {
+			margin: 0 0 20px 0;
+			&:last-child {
+				margin: 0;
 			}
 		}
-
-		//* Кнопка-бургер
-		#burger-target:target ~ .burger-icon::before {
-			transform: rotate(315deg);
-			background-color: $yellow;
-			top: 15px;
-			transition: 1s;
-		}
-		#burger-target:target ~ .burger-icon span {
-			background-color: transparent;
-			top: 15px;
-			width: 0;
-			transition: 0.4s;
-		}
-		#burger-target:target ~ .burger-icon::after {
-			transform: rotate(-315deg);
-			background-color: $yellow;
-			bottom: 15px;
-			transition: 1s;
+		&__link {
+			color: $white;
 		}
 	}
 }
+.burger-link,
+.close-burger {
+	position: absolute;
+	z-index: 3;
+	top: 2px;
+	right: -2px;
+	height: 50px;
+	width: 55px;
+}
+.close-burger {
+	display: none;
+}
+
+.header:target .header__menu, .header:target .header__menu::before{
+	transition: 1s;
+	right: 0;
+}
+.header:target .close-burger{
+	display: block;
+}
+.header__wrapper:target .header__menu, .header__wrapper:target .header__menu::before {
+	transition: 1s;
+	right: -100%;
+}
 
 
+.header:target .header__menu-burger::before {
+	transform: rotate(315deg);
+	background-color: $yellow;
+	top: 0px;
+	transition: 1s;
+}
+.header:target .header__menu-burger {
+	background-color: transparent;
+	transition: 0.2s;
+}
+.header:target .header__menu-burger::after {
+	transform: rotate(-315deg);
+	background-color: $yellow;
+	top: -4px;
+	transition: 1s;
+}
 
-
-
-
-
-
+.header__wrapper:target .header__menu-burger::before {
+	transform: rotate(0deg);
+	background-color: $green;
+	top: -15px;
+	transition: 1s;
+}
+.header__wrapper:target .header__menu-burger {
+	background-color: $green;
+	transition: 0.3s 0.7s;
+}
+.header__wrapper:target .header__menu-burger::after {
+	transform: rotate(0deg);
+	background-color: $green;
+	top: 10px;
+	transition: 1s;
+}

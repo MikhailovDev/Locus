@@ -1,0 +1,32 @@
+[class*="__container"] {
+	max-width: 1612px;
+	margin: 0 auto;
+	padding: 0 15px;
+	box-sizing: content-box;
+
+	@media (max-width: 1612px) {
+		max-width: 1440px;
+	}
+	@media (max-width: 1439.98px) {
+		max-width: 1024px;
+	}
+	@media (max-width: 1023.98px) {
+		max-width: 768px;
+	}
+}
+
+
+.page {
+	display: flex;
+	flex-direction: column;
+
+	font-family: "Poppins";
+	font-style: normal;
+
+	-webkit-tap-highlight-color: transparent;
+}
+
+.main {
+	flex: 1 1 auto;
+}
+

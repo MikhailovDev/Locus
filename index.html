@@ -4,227 +4,209 @@
 	<head>
 		<meta charset="UTF-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<meta name="format-detection" content="telephone=no">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<link rel="stylesheet" href="css/style.css">
-		<title>Locus - верстка макета по методологии БЭМ!</title>
-
+		<title>Locus</title>
 	</head>
 
-	<body>
-
-		<div class="wrapper">
-
-			<header class="header header__position">
-				<div class="container">
+	<body class="page">
+		<header id="open" class="header">
+			<div id="close" class="header__wrapper">
+				<div class="header__container">
 					<div class="header__inner">
-						<div class="header__logo logo">
-							<img class="logo__img" src="img/header/logo.svg" alt="Locus">
-							<a class="logo__name logo__name_active" href="#">Locus</a>
+						<div href="" class="header__logo logo">
+							<div class="logo__image">
+								<img class="logo__item" src="img/header/logo.svg" alt="Логотип">
+							</div >
+							<a href="#" class="logo__name logo__name_active logo__name_hover">locus</a>
 						</div>
-						<ul class="header__nav nav" id="burger-target">
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#">Home</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#contact">Contact</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#location">Location</a></li>
-							<li class="nav__item"><a class="nav__link nav__link_hover nav__link_active" href="#about">About Us</a></li>
-						</ul>
-						<a href="#">
-							<img class="header__button-sign-up header__button-sign-up_active" src="img/header/sign-up.svg" alt="sign-up">
+						<nav class="header__menu menu">
+							<ul class="menu__items">
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">home</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">contact</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">location</a></li>
+								<li class="menu__item"><a href="#" class=" menu__link menu__link_active  menu__link_hover ">about us</a></li>
+							</ul>
+						</nav>
+						<button class="header__button button button_hover button_active">sign up</button>
+						<a href="#" class="header__sign-up header__sign-up_active">
+							<img class="header__sign-up-image" src="img/header/sign-up.svg" alt="sign-up">
 						</a>
-						<a class="burger-icon" href="#burger-target">
-							<span></span>
-						</a>
-						<a class="burger-link" href="#">
-						</a>
-						<button class="btn header__btn btn_hover btn_active">sign up</button>
-					</div >
+						<div class="header__menu-burger"></div>
+						<a class="burger-link" href="#open"></a>
+						<a class="close-burger" href="#close"></a>
+					</div>
 				</div>
-			</header>
-
-			<main class="main">
-
-				<section class="about">
-					<div class="container">
-						<div class="about__content">
-							<div class="about__item about__item_text">
-								<div class="about__description">
+			</div >
+		</header>
+		<main class="main">
+			<section class="about">
+				<div class="about__wrapper">
+					<div class="about__container">
+						<div class="about__inner">
+							<div class="about__content-block">
+								<div class="about__information">
 									<h1 class="about__title title">Get the inspiration of interior design here</h1>
-									<p class="about__text text">Architecture not only about engineering, it even lands to art and aesthetics. With us, you will get a residentical design with an extraordinary touch of art.</p>
-									<button class="about__btn btn btn_hover btn_active">Let’s go</button>
+									<p class="about__text text">Architecture not only about engineering, it even  lands to art and aesthetics. With us, you will get  a residentical design with an extraordinary touch  of art.</p>
 								</div>
+								<button class="about__button button button_active button_hover">Let&prime;s go</button>
 							</div>
-							<div class="about__item about__item_photo">
-								<div class="about__image">
-									<img class="about__img" src="img/about/main-photo.png" alt="main-photo">
-								</div>
+							<div class="about__image-block">
+								<img class="about__image" src="img/about/main-photo.png" alt="Фурнитура">
 							</div>
 						</div>
 					</div>
-				</section>
-
-				<section class="how" id="location">
-					<div class="container">
-						<div class="how__content">
-							<div class="how__inner-1">
-								<div class="how__description">
-									<h2 class="how__title title">How it works</h2>
-									<p class="how__text text">Spice up your space even simpler than you think</p>
-								</div>
-								<div class="how__video">
-									<div class="how__row1 row">
-										<div class="row__items row__item-1">
-											<video controls loop class="row__move" poster="img/how/video-foto_1063_on_350.jpg">
-												<source src="img/video/Funkylicious.mp4">
-											</video>
-										</div>
-										<div class="row__items row__item-2">
-											<div class="row__description-column">
-												<div class="row__description-inner">
-													<p class="row__text">We provide design and build for commercial building, interior and furniture to improve the better life. </p>
-													<p class="row__player-text"><span class="row__player-only-text">see video</span ></p>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="how__inner-2">
-								<div class="how__row2">
-									<div class="how__items how__item-1">
-										<div class="how__image-block">
-											<img class="how__image" src="img/how/sofa_642x650.jpg" alt="sofa-photo">
-										</div>
+				</div>
+			</section>
+			<section class="mission">
+				<div class="mission__wrapper">
+					<div class="mission__container">
+						<div class="mission__inner">
+							<div class="mission__title-block">
+								<h2 class="mission__title title">How it works</h2>
+								<p class="mission__text text">Spice up your space even simpler than you think</p>
+							</div >
+							<div class="mission__video-block video-block">
+								<div class="video-block__block">
+									<video class="video-block__video" poster="img/mission/video-foto_1063_on_350.jpg" src="#"></video>
+								</div >
+								<div class="video-block__inner">
+									<div class="video-block__content">
+										<p class="video-block__title-block">We provide design and build for commercial building, interior and furniture to improve the better life. </p>
+										<span class="video-block__player-text">see video</span>
 									</div >
-									<div class="how__items how__item-2">
-										<div class="how__description-right">
-											<div class="how__desc-row">
-												<h3 class="how__desc-title">Our mission is to deliver aesthetic visual for your home</h3>
-												<p class="how__desc-text">By applying bacis psychology principles,  we are going to explain how perception  works and how we can use this understanding  to maximise the space that we occupy in  our homes.</p>
-											</div>
-										</div>
+									<div class="video-block__play-button">
+										<span></span>
 									</div>
 								</div>
 							</div>
-						</div >
+							<section class="mission__aesthetics aesthetics">
+								<div class="aesthetics__image-block">
+									<img class="aesthetics__image" src="img/mission/sofa_642x650.jpg" alt="Эстетичные вид диванов">
+								</div >
+								<div class="aesthetics__inner">
+									<div class="aesthetics__content">
+										<h3 class="aesthetics__title">Our mission is to deliver aesthetic visual for your home</h3>
+										<p class="aesthetics__text">By applying bacis psychology principles,  we are going to explain how perception  works and how we can use this understanding  to maximise the space that we occupy in  our homes.</p>
+									</div >
+								</div >
+							</section>
+						</div>
 					</div>
-				</section>
-
-				<section class="project" id="about">
-					<div class="container">
+				</div>
+			</section>
+			<section class="project">
+				<div class="project__wrapper">
+					<div class="project__container">
 						<div class="project__inner">
-							<div class="project__description">
+							<div class="project__title-block">
 								<h2 class="project__title title">Our project </h2>
 								<p class="project__text text">Introducing our first official project</p>
 							</div>
-							<div class="project__content">
-								<a class="project__item project__item_first" href="https://www.livingroomideas.eu/">
-									<div class="project__main-text">
-										<h3 class="project__item-title">Project Livingroom</h3>
-										<p class="project__item-text">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
+							<div class="project__content content-project">
+								<a href="#" class="content-project__item content-project__item_hover">
+									<div class="content-project__text">
+										<h3 class="content-project__title">Project Livingroom</h3>
+										<p class="content-project__description">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
 									</div >
-									<div class="project__item-block project__item-block_underline">
-										<img class="project__item-image project__item-image_hover" src="img/project/livingroom.jpg" alt="sofa-photo">
-									</div >
+									<div class="content-project__image-block ">
+										<img class="content-project__image" src="img/project/livingroom.jpg" alt="Жилая комната">
+									</div>
 								</a>
-
-								<a class="project__item project__item_center" href="https://www.ivd.ru/dizajn-i-dekor/rabocee-mesto">
-									<div class="project__main-text project__main-text_center">
-										<h3 class="project__item-title">Project workspace</h3>
-										<p class="project__item-text project__item-text_center">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
+								<a href="#" class="content-project__item content-project__item_circle content-project__item_hover">
+									<div class="content-project__text content-project__text_circle">
+										<h3 class="content-project__title">Project workspace</h3>
+										<p class="content-project__description content-project__description_circle">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
 									</div >
-									<div class="project__item-block project__item-block_center project__item-block_underline">
-										<img class="project__item-image project__item-image_hover project__item-image_radius" src="img/project/workspace.jpg" alt="chairs-photo">
-									</div >
+									<div class="content-project__image-block  content-project__image-block_circle">
+										<img class="content-project__image" src="img/project/workspace.jpg" alt="Жилая комната">
+									</div>
 								</a>
-
-								<a class="project__item project__item_last" href="https://all-library.ru/">
-									<div class="project__main-text ">
-										<h3 class="project__item-title">Library</h3>
-										<p class="project__item-text">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
+								<a href="#" class="content-project__item content-project__item_hover">
+									<div class="content-project__text">
+										<h3 class="content-project__title">Library</h3>
+										<p class="content-project__description">A simple guide to create the perfect livingroom for . Night Watc works beautifully in a wide gamut of arrangements.</p>
 									</div >
-									<div class="project__item-block">
-										<img class="project__item-image project__item-image_hover" src="img/project/library.jpg" alt="library-photo">
-									</div >
+									<div class="content-project__image-block ">
+										<img class="content-project__image" src="img/project/library.jpg" alt="Жилая комната">
+									</div>
 								</a>
 							</div>
 						</div>
 					</div>
-				</section>
-
-				<section class="certificate">
-					<div class="container">
-						<div class="certificate__inner">
-							<h2 class="certificate__title title">Testimonial</h2>
-							<div class="certificate__captions">
-								<img class="certificate__caption" src="img/certificate/poster1.png" alt="certificate poster photo">
-								<img class="certificate__caption" src="img/certificate/poster2.png" alt="certificate poster photo">
-								<img class="certificate__caption" src="img/certificate/poster3.png" alt="certificate poster photo">
-								<img class="certificate__caption" src="img/certificate/poster4.png" alt="certificate poster photo">
-							</div>
-							<div class="certificate__info">
-								<div class="certificate__image">
-									<img src="img/certificate/photo-certificate.jpg" alt="photo sertificate">
+				</div>
+			</section>
+			<section class="testimonial">
+				<div class="testimonial__wrapper">
+					<div class="testimonial__container">
+						<div class="testimonial__inner">
+							<h2 class="testimonial__title-block">
+								<div class="testimonial__title title">Testimonial</div>
+								<div class="testimonial__signatures">
+									<img class="testimonial__image" src="img/testimonial/signature1.png" alt="Подпись">
+									<img class="testimonial__image" src="img/testimonial/signature2.png" alt="Подпись">
+									<img class="testimonial__image" src="img/testimonial/signature3.png" alt="Подпись">
+									<img class="testimonial__image" src="img/testimonial/signature4.png" alt="Подпись">
 								</div>
-								<div class="certificate__content">
-									<div class="certificate__content-inner">
-										<div class="certificate__data">
-											<div class="certificate__item">
-												<span class="certificate__number">105</span>
-												<p class="certificate__text">project done</p>
-											</div>
-											<div class="certificate__item">
-												<span class="certificate__number">12</span>
-												<p class="certificate__text">years of experience</p>
-											</div>
-											<div class="certificate__item">
-												<span class="certificate__number">10+</span>
-												<p class="certificate__text certificate__text_last">big company partnership</p>
-											</div>
-										</div>
-										<div class="certificate__quote">
-											<img class="certificate__quote-image" src="img/certificate/svg-quote.svg" alt="quote image">
-											<blockquote class="certificate__blockquote">&quot;Not able to tell you how happy I am with interior design. Interior design has completely surpassed our expectations. Interior design saved my business. Interior design is worth much more than I paid.&quot;</blockquote>
-											<cite class="certificate__author">- Roscoe</cite>
-										</div>
+							</h2>
+							<div class="testimonial__content-block testimonial-content">
+								<div class="testimonial-content__image-block">
+									<img class="testimonial-content__image" src="img/testimonial/photo-testimonial.jpg" alt="Девушка с компьютером">
+								</div >
+								<div class="testimonial-content__text-block">
+									<div class="testimonial-content__statistic testimonial-statistic">
+										<div class="testimonial-statistic__item">
+											<div class="testimonial-statistic__number">105</div>
+											<div class="testimonial-statistic__description">project done</div>
+										</div >
+										<div class="testimonial-statistic__item">
+											<div class="testimonial-statistic__number">12</div>
+											<div class="testimonial-statistic__description">years of experience</div>
+										</div >
+										<div class="testimonial-statistic__item">
+											<div class="testimonial-statistic__number">10+</div>
+											<div class="testimonial-statistic__description">big company partnership</div>
+										</div >
+									</div>
+									<div class="testimonial-content__quote-block">
+										<img class="testimonial-content__quote-image" src="img/testimonial/quote.svg" alt="Фото кавычек">
+										<blockquote class="testimonial-content__quote">"Not able to tell you how happy I am with interior design. Interior design has completely surpassed our expectations. Interior design saved my business. Interior design is worth much more than I paid."</blockquote>
+										<cite class="testimonial-content__author">- Roscoe</cite>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
-				</section>
-
-			</main>
-
-			<footer class="feedback" id="contact">
-				<div class="container">
-					<div class="feedback__inner">
-						<div class="feedback__content">
-							<div class="feedback__info">
-								<h2 class="title feedback__title">Contact us</h2>
-								<p class="feedback__text">Have any questions? Want help before getting started?</p>
-							</div>
-							<form class="feedback__form form" action="#" method="post" enctype="multipart/form-data">
-								<div class="form__input-columns">
-									<label class="form__label" for="form__input-name">Full name</label>
-									<input placeholder=" " class="form__input-place form__focus" tabindex="1" type="text" id="form__input-name" required>
-								</div>
-								<div class="form__input-columns">
-									<label class="form__label" for="form__input-email">Email address</label>
-									<input placeholder=" " class="form__input-place form__focus" tabindex="2" type="email" id="form__input-email" required>
-								</div>
-								<div class="form__description-columns">
-									<label class="form__label" for="form__textarea-description">Description</label>
-									<textarea placeholder=" " class="form__textarea-place form__focus" tabindex="3"  id="form__textarea-description" rows="3" cols="1" required></textarea>
-								</div>
-								<button class="form__input-button btn btn_hover btn_active" tabindex="4" type="submit" value="submit">Send now</button>
-							</form>
+				</div>
+			</section>
+		</main>
+		<footer class="footer" id="contact">
+			<div class="footer__wrapper">
+				<div class="footer__container">
+					<div class="footer__inner">
+						<div class="footer__title-block">
+							<h2 class="footer__title title">Contact us</h2>
+							<p class="footer__text text">Have any questions? Want help before getting started?</p>
 						</div>
+						<form class="footer__form-block form" action="#" method="post" enctype="multipart/form-data">
+							<div class="form__input-columns">
+								<label class="form__label" for="form__input-name">Full name</label>
+								<input placeholder=" " class="form__input-place form__focus" tabindex="1" type="text" id="form__input-name" required>
+							</div>
+							<div class="form__input-columns">
+								<label class="form__label" for="form__input-email">Email address</label>
+								<input placeholder=" " class="form__input-place form__focus" tabindex="2" type="email" id="form__input-email" required>
+							</div>
+							<div class="form__description-columns">
+								<label class="form__label" for="form__textarea-description">Description</label>
+								<textarea placeholder=" " class="form__textarea-place form__focus" tabindex="3"  id="form__textarea-description" rows="3" cols="1" required></textarea>
+							</div>
+							<button class="form__input-button button button_hover button_active" tabindex="4" type="submit" value="submit">Send now</button>
+						</form>
 					</div>
 				</div>
-			</footer>
-
-		</div >
-
+			</div>
+		</footer>
 	</body>
 
 </html>

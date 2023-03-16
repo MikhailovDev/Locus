@@ -1,0 +1,61 @@
+//!Миксины
+
+@mixin fonts-size($min-width, $max-width, $min-font-size, $max-font-size, $line-height, $text-align) {
+	$difference: calc(($max-width - $min-width) / ($max-font-size - $min-font-size));
+	font-size: calc(($min-font-size + (100vw - $min-width) / $difference));
+	line-height: $line-height;
+	text-align: $text-align;
+
+	@media (min-width: $max-width) {
+		font-size: $max-font-size;
+	}
+}
+
+@mixin margin($width, $margin) {
+	@media (max-width: $width) {
+		margin: $margin;
+	}
+}
+
+//!Шаблоны
+
+%hover20 {
+	border-radius: 15px;
+	overflow: hidden;
+
+	transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+	&:hover {
+		border-radius: 3px;
+	}
+}
+
+//! Ключевые кадры
+@keyframes flashing-form {
+	0% {
+		background-color: white;
+	}
+	100% {
+		background-color: #ccf0e628;
+	}
+}
+
+// !Цвета
+
+//*Шрифты и фон
+$light-green: #CCF0E6;
+$green: #58A9A5;
+$dark-green: #486958;
+
+//*Цвет для заголовков и подзаголовков
+$black: #1C2323;
+$grey: #404242;
+
+//* Остальное
+$white: #ffffff;
+
+//* Активное состояние
+$yellow: #FEC62D;
+
+//* Состояние при наведении
+$hvrgreen: #67b9b7;
