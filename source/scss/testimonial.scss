@@ -79,9 +79,6 @@
 
 		color: $green;
 	}
-	&__statistic {
-		margin: 0 0 2.14rem 0;
-	}
 }
 .testimonial-statistic {
 	&__item {
@@ -127,6 +124,9 @@
 		}
 		&__quote {
 			text-align: justify;
+		}
+		&__statistic {
+			margin: 0 0 2.14rem 0;
 		}
 	}
 	.testimonial-statistic {

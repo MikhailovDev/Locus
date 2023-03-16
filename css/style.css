@@ -1250,9 +1250,6 @@ h1, h2, h3, h4, h5, h6 {
 	line-height: 38px;
 	color: #58A9A5;
 }
-.testimonial-content__statistic {
-	margin: 0 0 2.14rem 0;
-}
 
 .testimonial-statistic__number {
 	font-weight: 800;
@@ -1308,6 +1305,9 @@ h1, h2, h3, h4, h5, h6 {
 	}
 	.testimonial-content__quote {
 		text-align: justify;
+	}
+	.testimonial-content__statistic {
+		margin: 0 0 2.14rem 0;
 	}
 	.testimonial-statistic__item {
 		margin: 0 0 1.95vw 0;
